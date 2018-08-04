@@ -25,10 +25,10 @@ Once it's installed, you can execute the following command to deploy the script.
 
 ```
 $ wt create index.js /
-  -s AUTH0_CLIENT_ID=[your app client ID] /
-  -s AUTH0_CLIENT_SECRET=[your app client secret] /
   -s MGMT_CLIENT_ID=[your management API app client ID] /
   -s MGMT_CLIENT_SECRET=[your management API app client service] /
+  -s AUTH0_CLIENT_ID=[your app client ID] /
+  -s AUTH0_CLIENT_SECRET=[your app client secret] /
   -s AUTH0_DOMAIN=[your tenant domain] /
   -s AUTH0_SECRET_ENCODING=utf8 /
   --bundle
