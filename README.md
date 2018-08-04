@@ -14,7 +14,7 @@ You'll need:
 1. Note the client IDs and client secrets for both of the applications above, as you'll need them during deployment.
 
 ## Deploy
-This Webtask is deployed using the wt-cli.
+This Webtask is deployed using the Webtask CLI.
 ```
 $ npm i -g wt-cli
 $ wt init
