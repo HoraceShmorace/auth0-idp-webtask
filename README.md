@@ -1,5 +1,5 @@
 # auth0-idp-webtask
-An simple Webtask for accessing Auth0 identity provider APIs from your Auth0-authenticated application.
+An simple Webtask for calling Auth0 Identity Provider APIs from your Auth0-authenticated application.
 
 ## Example Use Case
 Your users log in to your application with Facebook via the Auth0 API, and you want to call the Facebook Graph API to fetch the user's Facebook photos.
@@ -7,7 +7,7 @@ Your users log in to your application with Facebook via the Auth0 API, and you w
 ## Setup
 You'll need:
 
-1. An Auth0 application (SPA or Regular Web Application) with which you authenticate your users.
+1. An Auth0 application (SPA or Regular Web Application) with which you authenticate your users using an Identity Provider (i.e. – Facebook, Google, etc). See here for instructions on how to connect your app to an Identity Provider: https://auth0.com/docs/identityproviders.
 
 1. An Auth0 *Machine to Machine* application configured to use the Auth0 Management API. Follow all of the setup instructions for **Step 1: Get a Token** here: https://auth0.com/docs/connections/calling-an-external-idp-api#step-1-get-a-token.
 
@@ -26,7 +26,7 @@ Once it's installed, you can execute the following command to deploy the script.
 ```
 $ wt create index.js /
   -s MGMT_CLIENT_ID=[your management API app client ID] /
-  -s MGMT_CLIENT_SECRET=[your management API app client service] /
+  -s MGMT_CLIENT_SECRET=[your management API app client secret] /
   -s AUTH0_CLIENT_ID=[your app client ID] /
   -s AUTH0_CLIENT_SECRET=[your app client secret] /
   -s AUTH0_DOMAIN=[your tenant domain] /
@@ -54,7 +54,7 @@ const options = {
     'Authorization': `Bearer ${the user's Auth0 token}`
   },
   body: JSON.stringify({
-    apiUrl: 'https://graph.facebook.com/v3.1/me?fields=id,name,about'
+    apiUrl: 'https://graph.facebook.com/v3.1/me/photos/?fields=images'
   })
 }
 
