@@ -41,7 +41,7 @@ At the end of the output of this command will be the endpoint URL of your deploy
 
 > https://wt-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-x.auth0-extend.com/auth0-idp-webtask
 
-## Use Your Endpoint
+## Use Your Webtask Endpoint
 Using fetch to get the Facebook profile of a user who has authenticated with Auth0's Facebook Identity Provider is as easy as making a post request in which:
 1. The user's Auth0 token is passed in the `Authorization` header using the `Bearer` strategy.
 
@@ -50,7 +50,7 @@ Using fetch to get the Facebook profile of a user who has authenticated with Aut
 ```
 import fetch from 'isomorphic-fetch' // Or any fetch library.
 
-const url = 'https://wt-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-x.auth0-extend.com/auth0-idp-webtask' // Your Webtask URL from the previous step.
+const webtaskUrl = 'https://wt-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-x.auth0-extend.com/auth0-idp-webtask' // Your Webtask URL from the previous step.
 const accessToken = [the user's Auth0 token]
 const options = {
   method: 'POST',
@@ -63,7 +63,7 @@ const options = {
   })
 }
 
-fetch(url, options)
+fetch(webtaskUrl, options)
   .then(data => console.log(JSON.stringify(data, 0, 2)))
   .catch(error => console.log(JSON.stringify(error, 0, 2)))
 ```
