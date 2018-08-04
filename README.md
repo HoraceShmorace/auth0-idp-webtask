@@ -46,6 +46,8 @@ Using fetch to get the Facebook profile of a user who has authenticated with Aut
 1. The apiUrl (including any query string values) is passed in the post data.
 
 ```
+import fetch from 'isomorphic-fetch' // Or any fetch library.
+
 const url = 'https://wt-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-x.auth0-extend.com/auth0-idp-webtask' // Your Webtask URL from the previous step.
 const options = {
   method: 'POST',
