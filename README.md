@@ -49,11 +49,12 @@ Using fetch to get the Facebook profile of a user who has authenticated with Aut
 import fetch from 'isomorphic-fetch' // Or any fetch library.
 
 const url = 'https://wt-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-x.auth0-extend.com/auth0-idp-webtask' // Your Webtask URL from the previous step.
+const accessToken = [the user's Auth0 token]
 const options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': `Bearer ${the user's Auth0 token}`
+    'Authorization': accessToken ? `Bearer ${accessToken}` : ''
   },
   body: JSON.stringify({
     apiUrl: 'https://graph.facebook.com/v3.1/me/photos/?fields=images'
