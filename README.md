@@ -109,7 +109,7 @@ fetch(url, options)
 {
   "code": 401,
   "message": "Unauthorized.",
-  "error": "Missing access token.",
+  "error": "Some error message.",
   "redirect": "https://wt-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-x.sandbox.auth0-extend.com/wryd-idp-api/login"
 }
 ```
