@@ -64,8 +64,8 @@ const options = {
 }
 
 fetch(url, options)
-  .then(data => data.json())
-  .then(data => console.log('data:', JSON.stringify(data,0,2)))
+  .then(data => console.log(JSON.stringify(data, 0, 2)))
+  .catch(error => console.log(JSON.stringify(error, 0, 2)))
 ```
 **Example 200 Response** (the user token successfully authenticated)
 ```
