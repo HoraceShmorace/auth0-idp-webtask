@@ -36,6 +36,7 @@ $ wt create index.js /
 At the end of the output of this command will be the endpoint URL of your deployed Webtask. Note this for later.
 
 > You can access your webtask at the following url:
+
 > https://wt-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-x.auth0-extend.com/auth0-idp-webtask
 
 ## Use Your Endpoint
