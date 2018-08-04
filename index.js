@@ -3,11 +3,6 @@ import express from 'express'
 import fetch from 'node-fetch'
 import Webtask from 'webtask-tools'
 
-const server = express()
-
-let accessToken
-let lastTokenFetch = 0
-
 const getAccessToken = (req, res, next) => {
   const context = req.webtaskContext
 
@@ -16,6 +11,7 @@ const getAccessToken = (req, res, next) => {
       next(error)
       return
     }
+
     const { accessToken, lastTokenFetch } = data
     const canUseToken = lastTokenFetch && (Date.now() - lastTokenFetch) / 1000 / 60 < 30
 
@@ -87,7 +83,7 @@ const callIdp = (req, res, next) => {
   const options = {
     headers: {
       'content-type': 'application/json',
-      authorization: `Bearer ${idpToken}`
+      'authorization': `Bearer ${idpToken}`
     }
   }
 
@@ -98,7 +94,7 @@ const callIdp = (req, res, next) => {
     })
 }
 
-server
+express()
   .use(bodyParser.json())
   .post(
     '*',

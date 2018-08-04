@@ -1,13 +1,13 @@
 {
-  "name": "wryd-idp-api",
+  "name": "auth0-idp-webtask",
   "version": "0.0.1",
-  "description": "",
+  "description": "An simple Webtask for accessing Auth0 identity provider APIs.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "HoraceShmorace",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
