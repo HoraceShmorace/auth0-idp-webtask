@@ -1,5 +1,5 @@
 # auth0-idp-webtask
-A simple Webtask for calling Auth0 Identity Provider APIs from your Auth0-authenticated application.
+A simple Webtask for calling Auth0 Identity Provider APIs (i.e. – Facebook, Google, etc) from your Auth0-authenticated application.
 
 ## Example Use Case
 * Your users log in to your application with Facebook via the Auth0 API, and you want to call the Facebook Graph API to fetch the user's Facebook photos.
@@ -9,7 +9,7 @@ A simple Webtask for calling Auth0 Identity Provider APIs from your Auth0-authen
 ## Setup
 You'll need:
 
-1. An Auth0 application (SPA or Regular Web Application) with which you authenticate your users using an Identity Provider (i.e. – Facebook, Google, etc). See here for instructions on how to connect your app to an Identity Provider: https://auth0.com/docs/identityproviders.
+1. An Auth0 application (SPA or Regular Web Application) with which you authenticate your users using an Identity Provider. See here for instructions on how to connect your app to an Identity Provider: https://auth0.com/docs/identityproviders.
 
 1. An Auth0 *Machine to Machine* application configured to use the Auth0 Management API. Follow all of the setup instructions for **Step 1: Get a Token** here: https://auth0.com/docs/connections/calling-an-external-idp-api#step-1-get-a-token.
 
