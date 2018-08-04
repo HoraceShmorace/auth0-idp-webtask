@@ -1,7 +1,7 @@
 # auth0-idp-webtask
 An simple Webtask for accessing Auth0 identity provider APIs from your Auth0-authenticated application.
 
-## Use Case
+## Example Use Case
 Your users log in to your application with Facebook via the Auth0 API, and you want to call the Facebook Graph API to fetch the user's Facebook photos.
 
 ## Setup
