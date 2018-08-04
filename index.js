@@ -94,7 +94,7 @@ const callIdp = (req, res, next) => {
     })
 }
 
-express()
+const server = express()
   .use(bodyParser.json())
   .post(
     '*',
