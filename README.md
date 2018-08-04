@@ -1,5 +1,5 @@
 # auth0-idp-webtask
-An simple Webtask for accessing Auth0 identity provider APIs. It allows you to access identity provider APIs from your Auth0-authenticated application.
+An simple Webtask for accessing Auth0 identity provider APIs from your Auth0-authenticated application.
 
 ## Setup
 You'll need:
