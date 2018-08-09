@@ -1,7 +1,7 @@
 # auth0-idp-webtask
 A simple Webtask for fetching data from the APis of Identity Providers (i.e. – Facebook, Google, etc) from your Auth0-authenticated application.
 
-## Example Use Case
+## Example Use Cases
 * Your users log in to your application with Facebook via the Auth0 API, and you want to call the Facebook Graph API to fetch the user's Facebook photos.
 
 * Your users log in to your application with Google via the Auth0 API, and you want to call the Google Drive API to fetch a list of the user's files and folders.
