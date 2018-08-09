@@ -15,7 +15,11 @@ const getAccessToken = (req, res, next) => {
     const { accessToken, lastTokenFetch } = data
     const canUseToken = lastTokenFetch && (Date.now() - lastTokenFetch) / 1000 / 60 < 30
 
-    if (accessToken && canUseToken) { req.accessToken = accessToken }
+    if (accessToken && canUseToken) {
+      req.accessToken = accessToken
+      next()
+      return
+    }
 
     const { AUTH0_DOMAIN, MGMT_CLIENT_ID, MGMT_CLIENT_SECRET } = context.data
     const url = `https://${AUTH0_DOMAIN}/oauth/token`
